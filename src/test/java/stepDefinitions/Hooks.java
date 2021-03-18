@@ -8,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.net.MalformedURLException;
 
@@ -18,7 +19,9 @@ public class Hooks {
     @Before
     public void openBrowser() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().deleteAllCookies();
     }
 
