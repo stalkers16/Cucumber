@@ -1,6 +1,6 @@
 Feature: Validating a title of E-shop page
   As a test engineer
-  I want to be able to validate a title on e-shop homepage
+  I want to be able to validate a title and phones on e-shop homepage
 
   Scenario: Verify both phone numbers on title page
     When I am on shop page using po
