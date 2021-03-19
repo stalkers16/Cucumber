@@ -15,11 +15,11 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class MyStepDefinitions {
+public class ShopMainPageStepDefinitions {
     private WebDriver driver;
     static ShopPage shopPage;
 
-    public MyStepDefinitions() {
+    public ShopMainPageStepDefinitions() {
         this.driver = Hooks.driver;
         shopPage = PageFactory.initElements(Hooks.driver, ShopPage.class);
     }
