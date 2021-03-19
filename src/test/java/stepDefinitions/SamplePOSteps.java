@@ -16,11 +16,13 @@ import static org.junit.Assert.assertEquals;
 public class SamplePOSteps {
     private WebDriver driver;
     static AgePage agePage;
+    static ShopPage shopPage;
     static AgeSubmittedPage ageSubmittedPage;
 
     public SamplePOSteps() {
         this.driver = Hooks.driver;
         agePage = PageFactory.initElements(Hooks.driver, AgePage.class);
+        shopPage = PageFactory.initElements(Hooks.driver, ShopPage.class);
         ageSubmittedPage = PageFactory.initElements(Hooks.driver, AgeSubmittedPage.class);
     }
 
@@ -37,6 +39,11 @@ public class SamplePOSteps {
     @Given("^I (?:am on|open) age page using PO$")
     public void iAmOnAgePage() throws Throwable {
         driver.get(agePage.getPageUrl());
+    }
+
+    @Given("^I (?:am on|open) shop page using PO$")
+    public void iAmOnShopPage() throws Throwable {
+        driver.get(shopPage.getPageUrl());
     }
 
     @And("^I click submit age using PO$")
