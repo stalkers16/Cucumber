@@ -33,7 +33,7 @@ public class SampleSteps {
 
     @Then("^I should see shop page title$")
     public void iShouldSeeShopPageTitle() throws Throwable {
-        assertTrue(driver.findElement(By.className("logo")).isDisplayed());
+        assertEquals(driver.getTitle(),"My Store");
     }
 
     @Then("^I should see shop page contact phone$")

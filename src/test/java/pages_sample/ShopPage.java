@@ -1,5 +1,6 @@
 package pages_sample;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -15,10 +16,17 @@ import static org.junit.Assert.*;
         private WebElement submitButton;
         @FindBy(how = How.CLASS_NAME, using = "error") // By.className("error)
         private WebElement errorText;
+        @FindBy(how = How.NAME, using = "title") // By.name("title")
+        private WebElement getTitle;
 
 
         public String getPageUrl() {
             return "http://automationpractice.com/index.php";
+        }
+
+        public getPageTitle() {
+            return getTitle();
+
         }
 
         public void enterName(String name) {

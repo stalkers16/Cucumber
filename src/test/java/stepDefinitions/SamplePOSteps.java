@@ -46,6 +46,11 @@ public class SamplePOSteps {
         driver.get(shopPage.getPageUrl());
     }
 
+    @Given("^I should see shop page title using PO$")
+    public void iShouldSeeShopPageUsingPO() throws Throwable {
+        driver.getTitle(shopPage.getPageTitle());
+    }
+
     @And("^I click submit age using PO$")
     public void iClickSubmitAge() throws Throwable {
         agePage.clickSubmit();

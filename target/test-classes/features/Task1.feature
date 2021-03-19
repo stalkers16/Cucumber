@@ -4,9 +4,15 @@ Feature: Validating a title of E-shop page
 
   Scenario: Simple scenario
     When I am on shop page using PO
-    Then I should see shop page title
+    Then I should see shop page title using PO
+
+#  Scenario: Simple scenario with PO
+#    When I am on shop page using PO
+#    Then I should see shop page title
 
   Scenario: Verify both phone numbers on title page
     When I am on shop page using PO
     Then I should see shop page contact phone
     And I should see shop page bottom phone
+
+#  I should see shop page title using PO
