@@ -1,6 +1,7 @@
 package pages_sample;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.How;
 import static org.junit.Assert.*;
 
     public class ShopPage {
+
         @FindBy(how = How.ID, using = "name") // By.id("name")
         private WebElement nameInput; // WebElement nameInput = driver.findElement(By.id("name"));
         @FindBy(how = How.NAME, using = "age") // By.name("age")
@@ -16,22 +18,25 @@ import static org.junit.Assert.*;
         private WebElement submitButton;
         @FindBy(how = How.CLASS_NAME, using = "error") // By.className("error)
         private WebElement errorText;
-        @FindBy(how = How.NAME, using = "title") // By.name("title")
-        private WebElement getTitle;
-
+        @FindBy(how = How.XPATH, using = "//strong[contains(text(),'0123-456-789')]")
+        private WebElement topPhone;
+        @FindBy(how = How.XPATH, using = "//span[contains(text(),'(347) 466-7432')]")
+        private WebElement bottomPhone;
 
         public String getPageUrl() {
             return "http://automationpractice.com/index.php";
         }
 
-        public getPageTitle() {
-            return getTitle();
-
+        public void enterName(String name) {
+            nameInput.sendKeys(name);
         }
 
-        public void enterName(String name) {
-            nameInput.clear();
-            nameInput.sendKeys(name);
+        public WebElement getTopPhone() {
+            return topPhone;
+        }
+
+        public WebElement getBottomPhone() {
+            return bottomPhone;
         }
 
         public void enterAge(int age) {
