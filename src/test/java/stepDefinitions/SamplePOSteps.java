@@ -40,7 +40,6 @@ public class SamplePOSteps {
     }
 
 
-
     @And("^I click submit age using PO$")
     public void iClickSubmitAge() throws Throwable {
         agePage.clickSubmit();
