@@ -62,7 +62,7 @@ public class ShopMainPageStepDefinitions {
 
     @Then("^I see following message: \"(.*)\" using PO$")
     public void iSeeFollowingMessage(String message) throws Throwable {
-        assertEquals(shopPage.checkMessageText(), message);
+        assertEquals(shopPage.checkMessageText().getText(), message);
     }
 
     @And("^I click sign in button$")

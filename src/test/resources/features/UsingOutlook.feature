@@ -10,7 +10,7 @@ Feature: Cucumber outline scenario
     And I enter password: <password> using PO
     And I click sign in using PO
     Then I see following message: "<message>" using PO
-    @working
+
     Examples:
       | email           | password      | message                     |
       | ""              | ""            | An email address required.  |
