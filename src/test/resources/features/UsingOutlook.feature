@@ -4,12 +4,12 @@ Feature: Cucumber outline scenario
 
   @debugs
   Scenario Outline: a new scenario outline
-    Given I am on shop page using po
+    Given I am on shop page
     And I click sign in button
-    When I enter email: <email> using PO
-    And I enter password: <password> using PO
+    When I enter email: <email> for authentification
+    And I enter password: <password> for authentification
     And I click sign in using PO
-    Then I see following message: "<message>" using PO
+    Then I see following message: "<message>" of authentification
 
     Examples:
       | email           | password      | message                     |
