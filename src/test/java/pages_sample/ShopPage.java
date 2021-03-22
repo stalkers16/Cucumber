@@ -19,7 +19,7 @@ public class ShopPage {
     @FindBy(how = How.ID, using = "passwd") // By.id("name")
     private WebElement message; // WebElement nameInput = driver.findElement(By.id("name"));
     @FindBy(how = How.XPATH, using = "//[*[@id=\"center_column\"]/div[1]/ol/li/text()]")
-    private String messageText;
+    private WebElement messageText;
     @FindBy(how = How.CSS, using = "#header > div.nav > div > div > nav > div.header_user_info > a")
     private WebElement signInButton;
 
@@ -49,7 +49,7 @@ public class ShopPage {
         submitLoginButton.click();
     }
 
-    public String checkMessageText() {
+    public WebElement checkMessageText() {
         return messageText;
     }
     public void clickSignInButton(){

@@ -32,12 +32,8 @@ public class ShopMainPageStepDefinitions {
 
     @Given("^I should see shop page title (.*)$")
     public void iShouldSeeShopPage(String title) throws Throwable {
-<<<<<<< HEAD
-        assertEquals(driver.getTitle(), title);
-=======
         String actualTitle = title;
         assertEquals(driver.getTitle(), actualTitle);
->>>>>>> 59fcb985af6a20a28b9099dd5878e1466e0e6e1b
     }
 
     @Then("^I should see shop page phone top (.*)$")
@@ -46,20 +42,6 @@ public class ShopMainPageStepDefinitions {
         assertEquals(shopPage.getTopPhone().getText(), actualTopPhone);
     }
 
-<<<<<<< HEAD
-    @Then("^I should see shop page phone bottom PO (.*)$")
-    public void iShouldSeeShopPagePhoneBottomPO(String bottomPhone) throws Throwable {
-        assertEquals(shopPage.getBottomPhone().getText(), bottomPhone);
-    }
-
-    @When("^I enter email: (.*) using PO$")
-    public void iEnterEmailEmailUsingPO(String email) throws Throwable {
-        shopPage.enterEmail(email);
-    }
-
-    @And("^I enter password: (.*) using PO$")
-    public void iEnterPasswordPasswordUsingPO(String password) throws Throwable {
-=======
     @Then("^I should see shop page phone bottom (.*)$")
     public void iShouldSeeShopPagePhoneBottom(String bottomPhone) throws Throwable {
         String actualBottomPhone = bottomPhone;
@@ -73,7 +55,6 @@ public class ShopMainPageStepDefinitions {
 
     @And("^I enter password: (.*) for authentification$")
     public void iEnterPasswordPasswordForAuthentification(String password) throws Throwable {
->>>>>>> 59fcb985af6a20a28b9099dd5878e1466e0e6e1b
         shopPage.enterPassword(password);
     }
 
@@ -82,15 +63,9 @@ public class ShopMainPageStepDefinitions {
         shopPage.submitLoginButton();
     }
 
-<<<<<<< HEAD
-    @Then("^I see following message: \"(.*)\" using PO$")
-    public void iSeeFollowingMessage(String message) throws Throwable {
-        assertEquals(shopPage.checkMessageText(), message);
-=======
     @Then("^I see following message: \"(.*)\" of authentification$")
     public void iSeeFollowingMessageOfAuthentification(String message) throws Throwable {
         assertEquals(shopPage.checkMessageText().getText(), message);
->>>>>>> 59fcb985af6a20a28b9099dd5878e1466e0e6e1b
     }
 
     @And("^I click sign in button$")
