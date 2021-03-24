@@ -23,11 +23,15 @@ public class ShopLoginPageStepDefinitions {
         loginPage.enterEmail(email);
     }
 
+    @When("^I enter email: (.*) for registration$")
+    public void iEnterEmailEmailForRegistration(String regEmail) throws Throwable {
+        loginPage.enterRegEmail(regEmail);
+    }
+
     @And("^I enter password: (.*) for authentification$")
     public void iEnterPasswordPasswordForAuthentification(String password) throws Throwable {
         loginPage.enterPassword(password);
     }
-
 
     @And("^I click sign in using PO$")
     public void iClickSignInUsingPO() {
@@ -37,5 +41,10 @@ public class ShopLoginPageStepDefinitions {
     @Then("^I see following message: \"(.*)\" of authentification$")
     public void iSeeFollowingMessageOfAuthentification(String message) throws Throwable {
         assertEquals(loginPage.checkMessageText().getText(), message);
+    }
+
+    @And("^I click Create account button$")
+    public void iClickCreateAccountButton() {
+        loginPage.createAccountButton();
     }
 }
