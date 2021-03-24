@@ -25,7 +25,9 @@ public class ShopLoginPageStepDefinitions {
 
     @When("^I enter email: (.*) for registration$")
     public void iEnterEmailEmailForRegistration(String regEmail) throws Throwable {
+        Thread.sleep(5000);
         loginPage.enterRegEmail(regEmail);
+        Thread.sleep(5000);
     }
 
     @And("^I enter password: (.*) for authentification$")
@@ -35,7 +37,7 @@ public class ShopLoginPageStepDefinitions {
 
     @And("^I click sign in using PO$")
     public void iClickSignInUsingPO() {
-        loginPage.submitLoginButton();
+        loginPage.submitLoginButton.click();
     }
 
     @Then("^I see following message: \"(.*)\" of authentification$")
@@ -44,7 +46,9 @@ public class ShopLoginPageStepDefinitions {
     }
 
     @And("^I click Create account button$")
-    public void iClickCreateAccountButton() {
-        loginPage.createAccountButton();
+    public void iClickCreateAccountButton() throws Throwable {
+        Thread.sleep(5000);
+        loginPage.createAccountButton.click();
+        Thread.sleep(5000);
     }
 }

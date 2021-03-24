@@ -7,9 +7,9 @@ import org.openqa.selenium.support.How;
 public class LoginPage {
 
     @FindBy(how = How.ID, using = "SubmitLogin")
-    private WebElement submitLoginButton;
+    public WebElement submitLoginButton;
     @FindBy(how = How.ID, using = "SubmitCreate")
-    private WebElement createAccountButton;
+    public WebElement createAccountButton;
     @FindBy(how = How.ID, using = "email") // By.id("name")
     private WebElement inputEmail; // WebElement nameInput = driver.findElement(By.id("name"));
     @FindBy(how = How.ID, using = "passwd") // By.id("name")
@@ -34,10 +34,6 @@ public class LoginPage {
     public void enterPassword(String password) {
         inputPassword.clear();
         inputPassword.sendKeys(password);
-    }
-
-    public void submitLoginButton() {
-        submitLoginButton.click();
     }
 
     public WebElement checkMessageText() {
