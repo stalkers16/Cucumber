@@ -28,6 +28,7 @@ public class ShopLoginPageStepDefinitions {
         loginPage.enterPassword(password);
     }
 
+
     @And("^I click sign in using PO$")
     public void iClickSignInUsingPO() {
         loginPage.submitLoginButton();

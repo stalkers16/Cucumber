@@ -11,8 +11,8 @@ Feature: Cucumber outline scenario
     Then I see following message: "<message>" of authentification
 
     Examples:
-      | email           | password      | message                     |
-      | ""              | ""            | An email address required.  |
-      | gatis           | ""            | Invalid email address.      |
-      | gatis@email.com | ""            | Password is required.       |
-      | gatis@email.com | 12345         | Authentication failed.      |
+    | email           | password    | message                     |
+    |                 |             | An email address required.  |
+    | gatis           |             | Invalid email address.      |
+    | gatis@email.com |             | Password is required.       |
+    | gatis@email.com | 12345       | Authentication failed.      |

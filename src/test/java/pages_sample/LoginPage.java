@@ -14,7 +14,7 @@ public class LoginPage {
     private WebElement inputPassword; // WebElement nameInput = driver.findElement(By.id("name"));
     @FindBy(how = How.ID, using = "passwd") // By.id("name")
     private WebElement message; // WebElement nameInput = driver.findElement(By.id("name"));
-    @FindBy(how = How.XPATH, using = "//[*[@id=\"center_column\"]/div[1]/ol/li/text()]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"center_column\"]/div[1]/ol/li")
     private WebElement messageText;
 
     public void enterEmail(String email) {
