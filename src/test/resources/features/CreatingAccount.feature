@@ -8,14 +8,27 @@ Feature: Register to site scenario
     When I enter email: gatis@email.com for registration
     And I click Create account button
     Then I should see registration page heading CREATE AN ACCOUNT
-    When I fill field First Name with value Gatis
-    And I fill field Last Name with value Zagars
-    And I fill field Password with value 12345
-    And I fill field Address with value Living str. 15
-    And I fill field City with value TestCity
-#    ToDo And I fill field State with value Florida
-    And I fill field Zip with value 54321
-#    ToDo And I fill field Country with value United States
-    And I fill field MobilePhone with value 12345678
+
+    When I fill fields with values
+   # | Field_ID            | value          |
+    | customer_firstname  | Gatis          |
+    | customer_lastname   | Zagars         |
+    | passwd              | 12345          |
+    | address1            | Living str. 15 |
+    | city                | TestCity       |
+    | postcode            | 54321          |
+    | phone_mobile        | 12345678       |
+
+    And I fill rest fields with corresponding values
+    #| Field_ID            | Value          |
+    | id_state            | Florida        |
+    | id_country          | United States  |
+    | months              | November       |
+    | newsletter          | 1              |
+    | id_gender2          | 2              |
+    | years               | 1967           |
+    | days                | 15             |
+
     And I click  on Register button
 #   ToDo Then I should see MyAccount page heading My account
+#   ToDo Implement headers.

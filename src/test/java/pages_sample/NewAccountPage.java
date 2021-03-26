@@ -6,21 +6,21 @@ import org.openqa.selenium.support.How;
 
 public class NewAccountPage {
     @FindBy(how = How.CSS, using = ".page-heading")
-    private WebElement heading;
+    public WebElement heading;
     @FindBy(how = How.ID, using = "customer_firstname")
-    private WebElement inputFirstName;
+    public WebElement inputFirstName;
     @FindBy(how = How.ID, using = "customer_lastname")
-    private WebElement inputLastName;
+    public WebElement inputLastName;
     @FindBy(how = How.ID, using = "passwd")
-    private WebElement inputPassword;
+    public WebElement inputPassword;
     @FindBy(how = How.ID, using = "address1")
-    private WebElement inputAddress;
+    public WebElement inputAddress;
     @FindBy(how = How.ID, using = "city")
-    private WebElement inputCity;
+    public WebElement inputCity;
     @FindBy(how = How.ID, using = "postcode")
-    private WebElement inputZip;
+    public WebElement inputZip;
     @FindBy(how = How.ID, using = "phone_mobile")
-    private WebElement inputMobilePhone;
+    public WebElement inputMobilePhone;
     @FindBy(how = How.ID, using = "submitAccount")
     public WebElement registerButton;
 

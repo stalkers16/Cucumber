@@ -25,9 +25,7 @@ public class ShopLoginPageStepDefinitions {
 
     @When("^I enter email: (.*) for registration$")
     public void iEnterEmailEmailForRegistration(String regEmail) throws Throwable {
-        Thread.sleep(5000);
         loginPage.enterRegEmail(regEmail);
-        Thread.sleep(5000);
     }
 
     @And("^I enter password: (.*) for authentification$")
@@ -47,8 +45,7 @@ public class ShopLoginPageStepDefinitions {
 
     @And("^I click Create account button$")
     public void iClickCreateAccountButton() throws Throwable {
-        Thread.sleep(5000);
         loginPage.createAccountButton.click();
-        Thread.sleep(5000);
+        Thread.sleep(2000); //added for stability of test
     }
 }
