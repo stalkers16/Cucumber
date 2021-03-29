@@ -5,12 +5,12 @@ Feature: Register to site scenario
   Scenario: Create an account
     Given I am on shop page
     And I click sign in button
-    When I enter email: gatis@email.com for registration
+    When I enter random email for registration
     And I click Create account button
     Then I should see registration page heading CREATE AN ACCOUNT
 
     When I fill fields with values
-   # | Field_ID            | value          |
+    | Field_ID            | value          |
     | customer_firstname  | Gatis          |
     | customer_lastname   | Zagars         |
     | passwd              | 12345          |
@@ -20,7 +20,7 @@ Feature: Register to site scenario
     | phone_mobile        | 12345678       |
 
     And I fill rest fields with corresponding values
-    #| Field_ID            | Value          |
+    | Field_ID            | Value          |
     | id_state            | Florida        |
     | id_country          | United States  |
     | months              | November       |
@@ -30,5 +30,4 @@ Feature: Register to site scenario
     | days                | 15             |
 
     And I click  on Register button
-#   ToDo Then I should see MyAccount page heading My account
-#   ToDo Implement headers.
+    Then I should see MyAccount page heading MY ACCOUNT

@@ -31,10 +31,6 @@ public class SampleSteps {
         driver.get("http://automationpractice.com/index.php");
     }
 
-
-
-
-
     @Then("^I should see home page header$")
     public void iShouldSeeHomePageHeader() throws Throwable {
         assertEquals("This is a home page",

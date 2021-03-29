@@ -3,6 +3,7 @@ package stepDefinitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.bytebuddy.utility.RandomString;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pages_sample.LoginPage;
@@ -28,6 +29,13 @@ public class ShopLoginPageStepDefinitions {
         loginPage.enterRegEmail(regEmail);
     }
 
+    @When("^I enter random email for registration$")
+    public void iEnterRandomEmailForRegistration() throws Throwable {
+        //String easy = RandomString.digits + "abcdefhijkprstuvwx";
+        RandomString randString = new RandomString(8);
+        String randEmail = randString+".com";
+        loginPage.enterRegEmail(randEmail);
+    }
     @And("^I enter password: (.*) for authentification$")
     public void iEnterPasswordPasswordForAuthentification(String password) throws Throwable {
         loginPage.enterPassword(password);
@@ -46,6 +54,6 @@ public class ShopLoginPageStepDefinitions {
     @And("^I click Create account button$")
     public void iClickCreateAccountButton() throws Throwable {
         loginPage.createAccountButton.click();
-        Thread.sleep(2000); //added for stability of test
+        Thread.sleep(3000);//without/or with lower timeout here test does not work
     }
 }

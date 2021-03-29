@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.util.Map;
+
 public class NewAccountPage {
     @FindBy(how = How.CSS, using = ".page-heading")
     public WebElement heading;
@@ -23,6 +25,20 @@ public class NewAccountPage {
     public WebElement inputMobilePhone;
     @FindBy(how = How.ID, using = "submitAccount")
     public WebElement registerButton;
+    @FindBy(how = How.ID, using = "id_state")
+    public WebElement inputState;
+    @FindBy(how = How.ID, using = "id_country")
+    public WebElement inputCountry;
+    @FindBy(how = How.ID, using = "months")
+    public WebElement inputMonth;
+    @FindBy(how = How.ID, using = "newsletter")
+    public WebElement inputNewsletter;
+    @FindBy(how = How.ID, using = "uniform-id_gender1")
+    public WebElement inputGender;
+    @FindBy(how = How.ID, using = "years")
+    public WebElement inputYear;
+    @FindBy(how = How.ID, using = "days")
+    public WebElement inputDays;
 
     public WebElement getNewAccountHeading() {
         return heading;
@@ -61,6 +77,34 @@ public class NewAccountPage {
     public void enterMobilePhone(String mobilePhone) throws Throwable {
         inputMobilePhone.clear();
         inputMobilePhone.sendKeys(mobilePhone);
+    }
+
+    public void enterState(String state) throws Throwable {
+        inputState.sendKeys(state);
+    }
+
+    public void enterCountry(String country) throws Throwable {
+        inputCountry.sendKeys(country);
+    }
+
+    public void enterMonth(String month) throws Throwable {
+        inputMonth.sendKeys(month);
+    }
+
+    public void enterNewsletter(String newsletter) throws Throwable {
+        inputNewsletter.click();
+    }
+
+    public void enterGender(String gender) throws Throwable {
+        inputGender.click();
+    }
+
+    public void enterYear(String year) throws Throwable {
+        inputYear.sendKeys(year);
+    }
+
+    public void enterDays(String days) throws Throwable {
+        inputDays.sendKeys(days);
     }
 }
 
